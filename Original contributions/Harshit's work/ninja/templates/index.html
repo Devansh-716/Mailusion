@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail Sender Upload</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #f7fafc;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            min-width: 320px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #555;
+        }
+        select, input[type="file"], button {
+            width: 100%;
+            padding: 0.6rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        button {
+            background: #2563eb;
+            color: #fff;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1d4ed8;
+        }
+        .msg {
+            margin-top: 1rem;
+            text-align: center;
+            color: #2563eb;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Send Mail</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="mailType">Select Mail Type:</label>
+            <select id="mailType" name="mailType" required>
+                <option value="">-- Choose Mail Type --</option>
+                <option value="birthday">Birthday Mail</option>
+                <option value="bill">Bill/Payment Mail</option>
+            </select>
+
+            <label for="fileUpload">Upload Excel File:</label>
+            <input type="file" id="fileUpload" name="fileUpload" accept=".xlsx" required>
+
+            <button type="submit">Send</button>
+        </form>
+        {% if message %}
+            <div class="msg">{{ message|safe }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>

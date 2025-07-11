@@ -1,0 +1,5 @@
+SUBJECT = Test Email
+
+BODY = "Hello {Name},
+        You are receiving this mail as a test.
+        Receiving this mail means the code worked."

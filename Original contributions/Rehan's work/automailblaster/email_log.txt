@@ -1,0 +1,2 @@
+[2025-07-05 14:08:52] Sent to ['rehanahmad0486@gmail.com', 'ahmedcollegework@gmail.com'] | Subject: Scheduled Test Email | Status: Success
+[2025-07-05 14:25:02] Sent to ['rehanahmad0486@gmail.com', 'ahmedcollegework@gmail.com', 'agarwaldevansh1981@gmail.com', 'busyemail4321@gmail.com'] | Subject: Scheduled Test Email | Status: Success
